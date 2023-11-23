@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, Image } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
   const gradientBackground = {
@@ -16,38 +17,80 @@ const Navigation = () => {
 
   const navLinkStyles = {
     fontFamily: "Arial, sans-serif",
-    fontSize: "18px",
+    fontSize: "16px",
     color: "#fff",
-    marginLeft: "15px",
+    marginLeft: "10px",
+    cursor: "pointer",
   };
 
   return (
     <Navbar style={gradientBackground} expand="lg">
       <Navbar.Brand href="#" style={brandStyles}>
-        <Image />
         CRAVE
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">
-          <Nav.Link href="Home.js" style={navLinkStyles}>
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             Home
-          </Nav.Link>
-          <Nav.Link href="AboutUs.js" style={navLinkStyles}>
+          </ScrollLink>
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             About
-          </Nav.Link>
-          <Nav.Link href="Menu.js" style={navLinkStyles}>
+          </ScrollLink>
+          <ScrollLink
+            to="menu"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             Menu
-          </Nav.Link>
-          <Nav.Link href="Contact.js" style={navLinkStyles}>
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             Contact Us
-          </Nav.Link>
-          <Nav.Link href="Review.js" style={navLinkStyles}>
+          </ScrollLink>
+          <ScrollLink
+            to="review"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             Review
-          </Nav.Link>
-          <Nav.Link href="Login.js" style={navLinkStyles}>
+          </ScrollLink>
+          <ScrollLink
+            to="login"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            style={navLinkStyles}
+          >
             Login
-          </Nav.Link>
+          </ScrollLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
